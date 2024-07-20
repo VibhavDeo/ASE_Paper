@@ -66,7 +66,7 @@ df = df.replace(np.nan, None)
 
 # print(df)
 
-output_file = os.path.join(script_dir, '..', 'data', 'gbr_hyperparameters_'+str(n_iter)+'.csv')
+output_file = os.path.join(script_dir, '..', '..', 'data', 'gbr_hyperparameters_'+str(n_iter)+'.csv')
 output_file = os.path.abspath(output_file)
 
 df.to_csv(output_file, index=False, na_rep='None')
