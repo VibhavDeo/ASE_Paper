@@ -1,0 +1,37 @@
+{"gradient_descent":{
+    "data/x_dtlz2.csv": 10.731817769456676,
+    "data/x_dtlz3.csv": 29.72345493320446,
+    "data/x_dtlz4.csv": 84.53351310849234,
+    "data/x_dtlz5.csv": 10.25166576519129,
+    "data/x_dtlz6.csv": 3.4748330920014703,
+    "data/x_dtlz7.csv": 1.780823100740805,
+    "data/x_pom3a.csv": 40.68273626711649,
+    "data/x_pom3b.csv": 36.95233888757431,
+    "data/x_pom3c.csv": 28.811532526423132,
+    "data/x_pom3d.csv": 48.19429614268706,
+    "data/x_SS-A.csv": 28.661557293563337,
+    "data/x_SS-B.csv": 1.8969832921526408,
+    "data/x_SS-C.csv": 26.603156867540438,
+    "data/x_SS-D.csv": 58.540487408109854
+  },
+  "random_forest":
+  {
+    "data/x_dtlz2.csv": 13.445860819544599,
+    "data/x_dtlz3.csv": 30.733147240569327,
+    "data/x_dtlz4.csv": 101.37526038794972,
+    "data/x_dtlz5.csv": 12.355308737991152,
+    "data/x_dtlz6.csv": 3.740376857232061,
+    "data/x_dtlz7.csv": 2.390719793934903,
+    "data/x_pom3a.csv": 40.43645467555036,
+    "data/x_pom3b.csv": 36.4856042901801,
+    "data/x_pom3c.csv": 27.409384250101095,
+    "data/x_pom3d.csv": 49.74725396094296,
+    "data/x_SS-A.csv": 27.644320623802813,
+    "data/x_SS-B.csv": 3.042574052600202,
+    "data/x_SS-C.csv": 26.42265455363251,
+    "data/x_SS-D.csv": 39.55849124102963
+  }
+  
+}
+  
+  
