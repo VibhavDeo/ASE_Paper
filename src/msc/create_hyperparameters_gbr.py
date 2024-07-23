@@ -41,7 +41,7 @@ for params in random_search:
     if params['loss'] in ['huber', 'quantile'] or 'alpha' not in params:
         pass
     else:
-        params.pop('alpha', None)
+        params['alpha']=0.9
     
     if params['n_iter_no_change'] is not None or 'validation_fraction' not in params:
         pass
