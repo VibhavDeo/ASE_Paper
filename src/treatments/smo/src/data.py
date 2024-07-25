@@ -89,9 +89,7 @@ class DATA:
 
     def best_rest(self,randomSeed,  rows, want,input):
         rows.sort(key=lambda a: a.d2h(input,randomSeed,self), reverse=False)
-        print("===========jfhajhfjahfadsfajdfhajsfdhasdhgfasf=========")
-        for row in rows:
-            print(row.cells[19])
+
         best = DATA(self.cols.names)
         rest = DATA(self.cols.names)
         for i, row in enumerate(rows):

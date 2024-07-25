@@ -5,14 +5,14 @@ import random
 import json
 import time
 
-# inputs = ['dtlz2','dtlz3','pom3a','pom3b','pom3c','SS-A','SS-B','SS-C','SS-D','Wine_quality']
+# inputs = ['dtlz2']
 file_output = 'smo_output.txt'
 inputs = ['dtlz2','dtlz3','dtlz4','dtlz5','dtlz6','dtlz7','pom3a','pom3b','pom3c','pom3d','SS-A','SS-B','SS-C','SS-D','SS-E','SS-F','SS-G','SS-H','SS-I','SS-J','SS-K','SS-L','SS-M','SS-N','SS-O']
 
 def gate(treatement, budget0, budget, some,input):
         score = []
         randomSeeds = random.sample(range(15000),20)    
-
+        # randomSeeds = [10000]
         for randomSeed in randomSeeds:
             print('------------------------------------------------------------------------------------------')
             print('SEED: ', randomSeed,"    ", treatement,"     ",input)
@@ -73,4 +73,7 @@ if __name__ == "__main__":
     with open(file_output, 'a') as file:
         file.write('\n*****************\nFINAL SMO OUTPUT ENTIRE DATA LIST\n*****************\n' + str(smos)+'\nTime taken: ' + str(end_time_0 - start_time_0) + '\n*****************\n\n*****************\n')
 
-    
+    file_path = "smo_data.json"
+    with open(file_path, 'w') as file:
+        json.dump(smos, file, indent=4)
+    print(f"Data successfully written to {file_path}")
