@@ -3,7 +3,7 @@ from helper import *
 from config import *
 import random
 import time
-
+import json
 
 inputs = ['dtlz2','dtlz3','dtlz4','dtlz5','dtlz6','dtlz7','pom3a','pom3b','pom3c','pom3d','SS-A','SS-B','SS-C','SS-D','SS-E','SS-F','SS-G','SS-H','SS-I','SS-J','SS-K','SS-L','SS-M','SS-N','SS-O']
 # inputs = ['dtlz2']
@@ -57,3 +57,7 @@ if __name__ == "__main__":
     with open(file_output, 'a') as file:
         file.write('\n*****************\nFINAL RRP OUTPUT ENTIRE DATA LIST\n*****************\n' + str(rrps)+'\nTime taken: ' + str(end_time_0 - start_time_0) + '\n*****************\n\n*****************\n')
 
+    file_path = "rrp_data.json"
+    with open(file_path, 'w') as file:
+        json.dump(rrps, file, indent=4)
+    print(f"Data successfully written to {file_path}")
