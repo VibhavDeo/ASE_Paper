@@ -11,21 +11,21 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 param_dist = {
     'loss': ['squared_error', 'absolute_error', 'huber', 'quantile'],
-    'learning_rate': uniform(0.001, 1.2),   # Learning rate of ML algorithms is usually between 0 to 1 
+    'learning_rate': uniform(0.01, 1.2),   # Learning rate of ML algorithms is usually between 0 to 1 
     'n_estimators': randint(50, 500),   # General values used
-    'subsample': uniform(0.001, 1), 
+    'subsample': uniform(0.01, 1), 
     'criterion': ['friedman_mse', 'squared_error'],
-    'min_samples_split': uniform(0.001, 0.999), 
-    'min_samples_leaf': uniform(0.01, 0.999), 
+    'min_samples_split': uniform(0.01, 0.999), 
+    'min_samples_leaf': uniform(0.01, 0.5), 
     'min_weight_fraction_leaf': uniform(0.0, 0.5), 
     'max_depth': [1, 2, 3, 4, 5, None],
     'min_impurity_decrease': uniform(0.0, 0.5), # As default is 0, selecting space closer to 0
     'init': [None, 'zero'],
-    'max_features': ['sqrt', 'log2', uniform(0.001, 0.999)], 
-    'alpha': uniform(0.001, 0.999),
+    'max_features': ['sqrt', 'log2', uniform(0.01, 0.999)], 
+    'alpha': uniform(0.01, 0.999),
     'max_leaf_nodes': [None, randint(2, 50)],
     'warm_start': [False, True],
-    'validation_fraction': uniform(0.001, 0.999), 
+    'validation_fraction': uniform(0.01, 0.999), 
     'n_iter_no_change': [None, randint(5, 20)], 
     'tol': uniform(0.5e-4, 1e-3),  
     'ccp_alpha': uniform(0.0, 0.02) # As default is 0, selecting space closer to 0
