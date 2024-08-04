@@ -32,7 +32,8 @@ class ROW:
         warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
         if(len(self.cells)==19):
-            X, Y = pd.read_csv("/Users/priyaandurkar/Documents/ASE_Paper/src/base_model/data/x_"+input+".csv"),pd.read_csv("/Users/priyaandurkar/Documents/ASE_Paper/src/base_model/data/y_"+input+".csv")
+            # X, Y = pd.read_csv("/Users/priyaandurkar/Documents/ASE_Paper/src/base_model/data/x_"+input+".csv"),pd.read_csv("/Users/priyaandurkar/Documents/ASE_Paper/src/base_model/data/y_"+input+".csv")
+            X, Y = pd.read_csv("/home/pandurk/ASE_Paper/src/base_model/data/x_"+input+".csv"),pd.read_csv("/home/pandurk/ASE_Paper/src/base_model/data/y_"+input+".csv")
        
             X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=seed)
 
@@ -54,7 +55,7 @@ class ROW:
                                             min_weight_fraction_leaf=self.cells[12],
                                             n_estimators=int(self.cells[13]) if self.cells[13]!=None else None,
                                             n_iter_no_change=int(self.cells[14]) if self.cells[14]!=None else None,
-                                            subsample=self.cells[15],
+                                            subsample=self.cells[15] if self.cells[15]<1 else 0.0,
                                             tol=self.cells[16],
                                             warm_start=self.cells[17],
                                             validation_fraction=self.cells[18] if self.cells[18]!=None else 0.1)
